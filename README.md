@@ -5,6 +5,12 @@
 **Game Name:** Fortfight
 
 
+**Task Distribution among Teammates**:
+- **Thomas Garvin (Lead Designer)**: Responsible for character and level design.
+- **Philip Clarke (Project Manager)**: Manages project timeline, resources, and coordination among team members.
+- **Trevor Dorfman (Lead Developer)**: Handles game development, including coding, AI implementation, and mechanics.
+
+
 
 Fortfight is an exciting **2D fighter game** set in a whimsical world of fortresses. The motivation behind creating this game is to provide a **fun and accessible gaming experience**. We wanted to make a **simple yet engaging game** that players of all skill levels can enjoy.
 
@@ -21,10 +27,5 @@ The main rule of Fortfight is to **defeat your opponent before they defeat you**
 - Jump: Spacebar
 - Pause/Menu: Esc key
 
-**Task Distribution among Teammates**:
-- **Thomas Garvin (Lead Designer)**: Responsible for character and level design.
-- **Philip Clarke (Project Manager)**: Manages project timeline, resources, and coordination among team members.
-- **Trevor Dorfman (Lead Developer)**: Handles game development, including coding, AI implementation, and mechanics.
-
 **Link to Slides**
-- [https://onedrive.live.com/edit.aspx?resid=9762D6CBD41BC6BD!331&ithint=file%2cpptx&wdo=2&authkey=!An0cMZhQ5YC5DY4](Game Plan Presentation)
+- [Game Plan Presentation]([Game Plan Presentation](https://onedrive.live.com/edit.aspx?resid=9762D6CBD41BC6BD!331&ithint=file%2cpptx&wdo=2&authkey=!An0cMZhQ5YC5DY4)
