@@ -4,4 +4,8 @@ Group Name: Team Trevor
 
 Game Name: Fortfight
 
-Philip Clarke, Trevor Dorfman, Glen Garvin
+Lead Designer: Thomas Garvin
+
+Project Manager: Philip Clarke
+
+Lead Developer: Trevor Dorfman
