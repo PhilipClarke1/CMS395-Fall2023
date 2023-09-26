@@ -1,11 +1,11 @@
 # CMS395-Fall2023
 
-Group Name: Team Trevor
+**Group Name:** Team Trevor
 
-Game Name: Fortfight
+**Game Name:** Fortfight
 
-Lead Designer: Thomas Garvin
+**Lead Designer:** Thomas Garvin
 
-Project Manager: Philip Clarke
+**Project Manager:** Philip Clarke
 
-Lead Developer: Trevor Dorfman
+**Lead Developer:** Trevor Dorfman
