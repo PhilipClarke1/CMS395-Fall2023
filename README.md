@@ -14,7 +14,7 @@
 
 Fortfight is an exciting **2D fighter game** set in a whimsical world of fortresses. The motivation behind creating this game is to provide a **fun and accessible gaming experience**. We wanted to make a **simple yet engaging game** that players of all skill levels can enjoy.
 
-The **target users** for Fortfight are **casual gamers of all ages** who enjoy simple yet entertaining 2D games. The game is designed to be accessible to both **beginners and experienced gamers**.
+The **target users** for Fortfight are **casual gamers of all ages** who enjoy simple yet entertaining 2D games. The game is designed to be accessible to both **beginners and experienced gamers**. 
 
 Fortfight takes place in a colorful and imaginative world filled with **exotic fighting grounds** where battles take place. Players choose their character and battle it out against **AI-controlled opponents** within these fantastical battle grounds.
 
