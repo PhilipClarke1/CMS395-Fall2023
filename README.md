@@ -26,7 +26,3 @@ The main rule of Fortfight is to **defeat your opponent before they defeat you**
 - Special move: Combination of key presses
 - Jump: Spacebar
 - Pause/Menu: Esc key
-
-**Link to Slides**
--[Game Plan Presentation](https://onedrive.live.com/edit.aspx?resid=9762D6CBD41BC6BD!331&ithint=file%2cpptx&wdo=2&authkey=!An0cMZhQ5YC5DY4)
-
