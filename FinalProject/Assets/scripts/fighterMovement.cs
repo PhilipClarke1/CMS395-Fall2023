@@ -21,6 +21,8 @@ public class fighterMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+            Debug.Log(transform.position);
         
         if ((Input.GetKey(KeyCode.RightArrow))){
                 animator.SetFloat("speed",1.0f);
