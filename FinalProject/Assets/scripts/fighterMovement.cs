@@ -2,46 +2,83 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class fighterMovement : MonoBehaviour
+public class FighterMovement : MonoBehaviour
 {
-    // Start is called before the first frame update
-    public float displacement;
+    public float moveSpeed = 5.0f;    // Fighter speed
     public Rigidbody2D fighter;
-    Vector2 initial;
     public Animator animator;
-    public float jump; // for jump
+    public float jumpForce = 1f;    // Jump force
 
+    private bool isGrounded;          // To know if the fighter is on the ground
 
     void Start()
     {
         fighter = GetComponent<Rigidbody2D>();
-        initial= fighter.transform.localPosition;
     }
 
-    // Update is called once per frame
     void Update()
+    {   
+        AnimateMovement();
+        HandleMovement();
+        HandleJump();
+    }
+
+    void HandleMovement()
+{
+    float move = 0f;
+
+    if (Input.GetKey(KeyCode.RightArrow))
     {
+        move = moveSpeed;
+        animator.SetFloat("speed", 1); // Set speed parameter immediately
+    }
+    else if (Input.GetKey(KeyCode.LeftArrow))
+    {
+        move = -moveSpeed;
+        animator.SetFloat("speed", 1); // Set speed parameter immediately
+    }
+    else
+    {
+        animator.SetFloat("speed", 0);
+    }
 
-            Debug.Log(transform.position);
-        
-        if ((Input.GetKey(KeyCode.RightArrow))){
-                animator.SetFloat("speed",1.0f);
-                initial.x=initial.x+displacement;
-                
+    fighter.velocity = new Vector2(move, fighter.velocity.y);
+}
+
+
+    void HandleJump()
+    {
+        if (isGrounded && Input.GetKeyDown(KeyCode.Space))
+        {
+            fighter.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
+
+            isGrounded = false;  // Reset grounded status after jumping
         }
-        
-        if (Input.GetKey(KeyCode.Space)){
-            //for jump
-            fighter.AddForce(new Vector2(fighter.velocity.x,jump));
-            
-        }
-       
-        if (!Input.anyKey)
-            animator.SetFloat("speed",0);
-        
+    }
 
-            
+    void AnimateMovement()
+    {
+        if (Mathf.Abs(fighter.velocity.x) > 0.01f)
+            animator.SetFloat("speed", Mathf.Abs(fighter.velocity.x));
+        else
+            animator.SetFloat("speed", 0);
+    }
 
-        fighter.MovePosition(initial);
+    private void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("ground"))
+    {
+        isGrounded = true;
     }
 }
+
+private void OnCollisionExit2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("ground"))
+    {
+        isGrounded = false;
+    }
+}
+}
+
+

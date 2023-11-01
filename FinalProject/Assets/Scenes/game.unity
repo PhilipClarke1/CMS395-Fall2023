@@ -148,12 +148,12 @@ Transform:
   m_GameObject: {fileID: 124455533}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -370.59036, y: -206.34366, z: -0.008736705}
+  m_LocalPosition: {x: -4.0903625, y: -0.09365845, z: -0.008736705}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1043125791}
-  m_Father: {fileID: 802769237}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &257093938
 GameObject:
@@ -416,7 +416,6 @@ RectTransform:
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 124455534}
   - {fileID: 1389501729}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -573,7 +572,7 @@ GameObject:
   - component: {fileID: 1043125788}
   m_Layer: 0
   m_Name: floor
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -739,10 +738,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c194bf85dd5f4de6a3486f2353fe9f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  displacement: 0.1
+  moveSpeed: 5
   fighter: {fileID: 0}
   animator: {fileID: 1098893058}
-  jump: 600
+  jumpForce: 700
 --- !u!50 &1098893064
 Rigidbody2D:
   serializedVersion: 4
@@ -991,11 +990,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.5
+      value: -6.25
       objectReference: {fileID: 0}
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.4
+      value: -1.25
       objectReference: {fileID: 0}
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1094,6 +1093,7 @@ SceneRoots:
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 3194058697261978062}
+  - {fileID: 124455534}
   - {fileID: 802769237}
   - {fileID: 1194363212}
   - {fileID: 257093939}
