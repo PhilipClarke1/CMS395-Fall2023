@@ -53,12 +53,12 @@ public class FighterMovement : MonoBehaviour
 {
     float move = 0f;
 
-    if (Input.GetKey(KeyCode.RightArrow))
+    if (Input.GetKey(KeyCode.D))
     {
         move = moveSpeed;
         animator.SetFloat("speed", 1); 
     }
-    else if (Input.GetKey(KeyCode.LeftArrow))
+    else if (Input.GetKey(KeyCode.A))
     {
         move = -moveSpeed;
         animator.SetFloat("speed", 1); 
