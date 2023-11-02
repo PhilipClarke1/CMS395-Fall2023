@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class FighterMovement : MonoBehaviour
 {
-    public float moveSpeed = 5.0f;    // Fighter speed
+    public float moveSpeed = 5.0f;    // speed of fighter
     public Rigidbody2D fighter;
     public Animator animator;
-    public float jumpForce = 1f;    // Jump force
+    public float jumpForce = 1f;    
 
     private bool isGrounded;          // To know if the fighter is on the ground
 
@@ -56,12 +56,12 @@ public class FighterMovement : MonoBehaviour
     if (Input.GetKey(KeyCode.RightArrow))
     {
         move = moveSpeed;
-        animator.SetFloat("speed", 1); // Set speed parameter immediately
+        animator.SetFloat("speed", 1); 
     }
     else if (Input.GetKey(KeyCode.LeftArrow))
     {
         move = -moveSpeed;
-        animator.SetFloat("speed", 1); // Set speed parameter immediately
+        animator.SetFloat("speed", 1); 
     }
     else
     {
