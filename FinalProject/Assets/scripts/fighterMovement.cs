@@ -21,7 +21,33 @@ public class FighterMovement : MonoBehaviour
         AnimateMovement();
         HandleMovement();
         HandleJump();
+        HandleAttack();
+        HandleAttack2();
+        HandleAttack3();
+
     }
+
+    void HandleAttack(){
+
+        if(Input.GetKeyDown(KeyCode.K)){
+            PerformAttack();
+        }
+    }
+
+    void HandleAttack2(){
+
+        if(Input.GetKeyDown(KeyCode.L)){
+            PerformAttack2();
+        }
+    }
+
+    void HandleAttack3(){
+
+        if(Input.GetKeyDown(KeyCode.L) && Input.GetKeyDown(KeyCode.K)){
+            PerformAttack3();
+        }
+    }
+
 
     void HandleMovement()
 {
@@ -53,6 +79,11 @@ public class FighterMovement : MonoBehaviour
             fighter.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
 
             isGrounded = false;  // Reset grounded status after jumping
+
+            // Debug.Log("Jump triggered in script");
+
+            animator.SetBool("isJumping", true);
+
         }
     }
 
@@ -69,7 +100,26 @@ public class FighterMovement : MonoBehaviour
     if (collision.gameObject.CompareTag("ground"))
     {
         isGrounded = true;
+
+        animator.SetBool("isJumping", false);
+
     }
+}
+void PerformAttack(){
+    animator.SetTrigger("attack");
+
+    // Debug.Log("Attack performed");
+
+}
+
+void PerformAttack2(){
+
+    animator.SetTrigger("attack2");
+}
+
+void PerformAttack3(){
+
+    animator.SetTrigger("attack3");
 }
 
 private void OnCollisionExit2D(Collision2D collision)
