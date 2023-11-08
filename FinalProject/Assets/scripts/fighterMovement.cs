@@ -52,16 +52,18 @@ public class FighterMovement : MonoBehaviour
     void HandleMovement()
 {
     float move = 0f;
-
+    
     if (Input.GetKey(KeyCode.D))
     {
         move = moveSpeed;
-        animator.SetFloat("speed", 1); 
+        animator.SetFloat("speed", 1);
+        transform.localScale = new Vector3(1, 1, 1); // Facing right
     }
     else if (Input.GetKey(KeyCode.A))
     {
         move = -moveSpeed;
-        animator.SetFloat("speed", 1); 
+        animator.SetFloat("speed", 1);
+        transform.localScale = new Vector3(-1, 1, 1); // Facing left
     }
     else
     {
@@ -70,6 +72,7 @@ public class FighterMovement : MonoBehaviour
 
     fighter.velocity = new Vector2(move, fighter.velocity.y);
 }
+
 
 
     void HandleJump()
