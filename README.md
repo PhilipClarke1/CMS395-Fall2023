@@ -16,9 +16,9 @@ Fortfight is an exciting **2D fighter game** set in a whimsical world of fortres
 
 The **target users** for Fortfight are **casual gamers of all ages** who enjoy simple yet entertaining 2D games. The game is designed to be accessible to both **beginners and experienced gamers**. 
 
-Fortfight takes place in a colorful and imaginative world filled with **exotic fighting grounds** where battles take place. Players choose their character and battle it out against **AI-controlled opponents** within these fantastical battle grounds.
+Fortfight takes place in a colorful and imaginative world filled with **exotic fighting grounds** where battles take place. Players control their character and battle it out against **AI-controlled opponents** within these fantastical battle grounds.
 
-The main rule of Fortfight is to **defeat your opponent before they defeat you**. Players use a combination of **punches, kicks, and special moves** to reduce their opponent's health points to zero. The last player standing wins the round.
+The main rule of Fortfight is to **defeat your opponent before they defeat you**. Players use a combination of **attacks and special moves** to reduce their opponent's health points to zero. The last player standing wins the round.
 
 **Controls**:
 - Player movement: Arrow keys or WASD for character movement
