@@ -18,7 +18,7 @@ public class FighterMovement : MonoBehaviour
 
     void Update()
     {   
-        AnimateMovement();
+        AnimateMovement();  
         HandleMovement();
         HandleJump();
         HandleAttack();
@@ -57,13 +57,13 @@ public class FighterMovement : MonoBehaviour
     {
         move = moveSpeed;
         animator.SetFloat("speed", 1);
-        transform.localScale = new Vector3(1, 1, 1); // Facing right
+        transform.localScale = new Vector3(1.5f, 1.5f, 1); // Facing right
     }
     else if (Input.GetKey(KeyCode.A))
     {
         move = -moveSpeed;
         animator.SetFloat("speed", 1);
-        transform.localScale = new Vector3(-1, 1, 1); // Facing left
+        transform.localScale = new Vector3(-1.5f, 1.5f, 1); // Facing left
     }
     else
     {
