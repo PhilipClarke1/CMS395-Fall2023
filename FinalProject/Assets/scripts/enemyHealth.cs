@@ -7,15 +7,18 @@ public class enemyHealth : MonoBehaviour
     public int currentHealth;
     public Animator animator;
     public SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer
+    public healthBar enemyhealthBar;
 
     void Start()
     {
         currentHealth = maxHealth;
+        enemyhealthBar.SetMaxHealth(maxHealth);
     }
 
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
+        enemyhealthBar.SetHealth(currentHealth);
 
         // Play damage animation  
         animator.SetTrigger("Hurt");
@@ -28,7 +31,7 @@ public class enemyHealth : MonoBehaviour
 
     void Die()
     {
-        Debug.Log("The enemy is dead");
+        // Debug.Log("The enemy is dead");
 
         // Show death animation 
         animator.SetBool("IsDead", true);

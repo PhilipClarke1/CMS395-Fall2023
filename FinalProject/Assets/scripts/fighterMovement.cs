@@ -11,7 +11,11 @@ public class FighterMovement : MonoBehaviour
     public Animator animator;
     public float jumpForce = 10f;   
 
+    private int totalDamageDealt = 0;
+
     public healthBar healthBar;
+
+    public GameOverScreen GameOverScreen;
 
     public int maxHealth = 100;
     int currentHealth;
@@ -63,7 +67,7 @@ public class FighterMovement : MonoBehaviour
 
         animator.SetTrigger("Hurt");
 
-        if(currentHealth < 0 ){
+        if(currentHealth <= 0 ){
             Die();
         }
     }
@@ -71,6 +75,8 @@ public class FighterMovement : MonoBehaviour
     void Die(){
 
         animator.SetBool("IsDead", true);
+
+        GameOverScreen.Setup(totalDamageDealt);
 
     }
 
@@ -90,6 +96,7 @@ public class FighterMovement : MonoBehaviour
 
 
             enemy.GetComponent<enemyHealth>().TakeDamage(attackOneDamage);
+            totalDamageDealt += attackOneDamage;
 
         }
         }
@@ -116,6 +123,7 @@ public class FighterMovement : MonoBehaviour
 
 
             enemy.GetComponent<enemyHealth>().TakeDamage(attackTwoDamage);
+            totalDamageDealt += attackTwoDamage;
         }
     }
 
@@ -131,6 +139,7 @@ public class FighterMovement : MonoBehaviour
 
 
             enemy.GetComponent<enemyHealth>().TakeDamage(attackThreeDamage);
+            totalDamageDealt += attackThreeDamage;
         }
     }
     }
