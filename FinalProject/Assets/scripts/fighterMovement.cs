@@ -13,6 +13,9 @@ public class FighterMovement : MonoBehaviour
 
     public int totalDamageDealt = 0;
 
+    public Transform healthBarPosition;
+
+
     public healthBar healthBar;
 
     public GameOverScreen GameOverScreen;

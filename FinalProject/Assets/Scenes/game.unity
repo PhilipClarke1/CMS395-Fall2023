@@ -1924,8 +1924,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 35
-  m_fontSizeBase: 35
+  m_fontSize: 50
+  m_fontSizeBase: 50
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -2243,6 +2243,7 @@ MonoBehaviour:
   animator: {fileID: 1098893058}
   jumpForce: 1000
   totalDamageDealt: 0
+  healthBarPosition: {fileID: 0}
   healthBar: {fileID: 689156734}
   GameOverScreen: {fileID: 1686496925}
   maxHealth: 100
@@ -3076,7 +3077,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -365.86743, y: 218.43939}
+  m_AnchoredPosition: {x: -338.11, y: 209.62}
   m_SizeDelta: {x: 146.7714, y: 43.7602}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1389501730
