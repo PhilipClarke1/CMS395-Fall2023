@@ -793,6 +793,37 @@ AudioReverbZone:
   m_Density: 100
   m_LFReference: 250
   m_RoomLF: 0
+--- !u!1 &916621258
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 916621259}
+  m_Layer: 6
+  m_Name: enemyattackradius
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &916621259
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 916621258}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.181, y: -0.066, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2836789637811467682}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &953726578
 GameObject:
   m_ObjectHideFlags: 0
@@ -1195,6 +1226,7 @@ MonoBehaviour:
   fighter: {fileID: 0}
   animator: {fileID: 1098893058}
   jumpForce: 1000
+  maxHealth: 100
   attackpoint: {fileID: 699508323}
   attackRange: 0.8
   enemyLayers:
@@ -2838,19 +2870,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 835868306570756871, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       propertyPath: m_LocalScale.x
-      value: 4.7714767
+      value: 4.444397
       objectReference: {fileID: 0}
     - target: {fileID: 835868306570756871, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       propertyPath: m_LocalScale.y
-      value: 4.6882443
+      value: 4.9653063
       objectReference: {fileID: 0}
     - target: {fileID: 835868306570756871, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.974
+      value: 5.24
       objectReference: {fileID: 0}
     - target: {fileID: 835868306570756871, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.51
+      value: -1.4228
       objectReference: {fileID: 0}
     - target: {fileID: 835868306570756871, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2900,6 +2932,22 @@ PrefabInstance:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 3525868060746933517, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+      propertyPath: m_Interpolate
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626383561846154431, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+      propertyPath: m_Size.x
+      value: 0.29076922
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626383561846154431, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+      propertyPath: m_Size.y
+      value: 0.44908568
+      objectReference: {fileID: 0}
+    - target: {fileID: 6626383561846154431, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.10662232
+      objectReference: {fileID: 0}
     - target: {fileID: 6626383561846154431, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       propertyPath: m_IsTrigger
       value: 0
@@ -2914,7 +2962,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 835868306570756871, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 916621259}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2921743247346487380, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       insertIndex: -1
@@ -2954,6 +3005,11 @@ SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2061588271114563883, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
   m_PrefabInstance: {fileID: 2836789637811467674}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2836789637811467682 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 835868306570756871, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+  m_PrefabInstance: {fileID: 2836789637811467674}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &2836789637811467683
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2970,6 +3026,12 @@ MonoBehaviour:
   moveSpeed: 2
   moveDuration: 1
   stopDuration: 1
+  animator: {fileID: 2836789637811467677}
+  attackPoint: {fileID: 2836789637811467682}
+  attackRange: 1.22
+  fighterLayers:
+    serializedVersion: 2
+    m_Bits: 256
 --- !u!1001 &3194058697261978062
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2980,19 +3042,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalScale.x
-      value: 1.6127999
+      value: 1.3844582
       objectReference: {fileID: 0}
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalScale.y
-      value: 1.6984501
+      value: 1.6424727
       objectReference: {fileID: 0}
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.83
+      value: -3.3939
       objectReference: {fileID: 0}
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -1.81
+      value: -1.8449
       objectReference: {fileID: 0}
     - target: {fileID: 1003514075937099950, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -3076,7 +3138,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5387337991915429451, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_Layer
-      value: 0
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 5387337991915429451, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
+      propertyPath: m_TagString
+      value: Fighter
       objectReference: {fileID: 0}
     - target: {fileID: 6961162407652583821, guid: fba0621affdcc4f3f9f19e1c237730c3, type: 3}
       propertyPath: m_SortingLayer

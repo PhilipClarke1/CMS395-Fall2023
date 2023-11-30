@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class FighterMovement : MonoBehaviour
 {
+
+
     public float moveSpeed = 5.0f;    // speed of fighter
     public Rigidbody2D fighter;
     public Animator animator;
     public float jumpForce = 10f;   
+
+    public healthBar healthBar;
+
+    public int maxHealth = 100;
+    int currentHealth;
 
     public Transform attackpoint; 
     public float attackRange = 0.5f;
@@ -25,6 +32,8 @@ public class FighterMovement : MonoBehaviour
     void Start()
     {
         fighter = GetComponent<Rigidbody2D>();
+        currentHealth = maxHealth;
+        healthBar.SetMaxHealth(maxHealth);
     }
 
     void Update()
@@ -44,6 +53,24 @@ public class FighterMovement : MonoBehaviour
         HandleAttack();
         HandleAttack2();
         HandleAttack3();
+
+    }
+
+    public void TakeDamage(int damage){
+        currentHealth -= damage;
+
+        healthBar.SetHealth(currentHealth);
+
+        animator.SetTrigger("Hurt");
+
+        if(currentHealth < 0 ){
+            Die();
+        }
+    }
+
+    void Die(){
+
+        animator.SetBool("IsDead", true);
 
     }
 
