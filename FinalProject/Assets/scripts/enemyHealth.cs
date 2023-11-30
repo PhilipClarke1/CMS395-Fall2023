@@ -40,11 +40,19 @@ public class enemyHealth : MonoBehaviour
 
         // Start the fade-out coroutine
         StartCoroutine(FadeOut(3f)); // 1 second fade-out time
+        StartCoroutine(ShowNextLevelScreenAfterDelay(2.5f));
 
-        NextLevelScreen.Setup();
+
+        //NextLevelScreen.Setup();
 
     }
 
+
+    IEnumerator ShowNextLevelScreenAfterDelay(float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        NextLevelScreen.Setup();
+    }
     IEnumerator FadeOut(float fadeTime)
     {
         float startAlpha = spriteRenderer.color.a;
