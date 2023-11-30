@@ -1194,13 +1194,16 @@ MonoBehaviour:
   moveSpeed: 5
   fighter: {fileID: 0}
   animator: {fileID: 1098893058}
-  jumpForce: 700
+  jumpForce: 1000
   attackpoint: {fileID: 699508323}
   attackRange: 0.8
   enemyLayers:
     serializedVersion: 2
     m_Bits: 64
-  attackDamage: 40
+  attackOneDamage: 25
+  attackTwoDamage: 30
+  attackThreeDamage: 40
+  attackRate: 2
 --- !u!50 &1098893064
 Rigidbody2D:
   serializedVersion: 4
@@ -2223,7 +2226,7 @@ Transform:
   m_GameObject: {fileID: 1521763943}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 13.009, y: -0.2053, z: 0.008736705}
+  m_LocalPosition: {x: 14.06, y: -0.27, z: 0.008736705}
   m_LocalScale: {x: 1.5377189, y: 9.397064, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2695,7 +2698,7 @@ Transform:
   m_GameObject: {fileID: 1971960449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.7089, y: -0.1023, z: 0.008736705}
+  m_LocalPosition: {x: -3.84, y: -0.1023, z: 0.008736705}
   m_LocalScale: {x: 1.5377189, y: 9.5802355, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2905,6 +2908,10 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 4886d24883a4b49be885e5eb22ccd395, type: 2}
+    - target: {fileID: 7073663017519103308, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+      propertyPath: m_AllowConstantClipSamplingOptimization
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -2912,6 +2919,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 2921743247346487380, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2836789637811467676}
+    - targetCorrespondingSourceObject: {fileID: 2921743247346487380, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2836789637811467683}
   m_SourcePrefab: {fileID: 100100000, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
 --- !u!1 &2836789637811467675 stripped
 GameObject:
@@ -2932,6 +2942,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHealth: 100
   currentHealth: 0
+  animator: {fileID: 2836789637811467677}
+  spriteRenderer: {fileID: 2836789637811467681}
+--- !u!95 &2836789637811467677 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 7073663017519103308, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+  m_PrefabInstance: {fileID: 2836789637811467674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!212 &2836789637811467681 stripped
+SpriteRenderer:
+  m_CorrespondingSourceObject: {fileID: 2061588271114563883, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
+  m_PrefabInstance: {fileID: 2836789637811467674}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2836789637811467683
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2836789637811467675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf55ebdf74c464e21a43e36781efc72d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fighter: {fileID: 0}
+  moveSpeed: 2
+  moveDuration: 1
+  stopDuration: 1
 --- !u!1001 &3194058697261978062
 PrefabInstance:
   m_ObjectHideFlags: 0

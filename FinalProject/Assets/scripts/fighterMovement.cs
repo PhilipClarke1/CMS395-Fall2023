@@ -7,7 +7,7 @@ public class FighterMovement : MonoBehaviour
     public float moveSpeed = 5.0f;    // speed of fighter
     public Rigidbody2D fighter;
     public Animator animator;
-    public float jumpForce = 1f;   
+    public float jumpForce = 10f;   
 
     public Transform attackpoint; 
     public float attackRange = 0.5f;
