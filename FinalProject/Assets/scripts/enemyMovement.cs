@@ -89,13 +89,17 @@ public class enemyMovement : MonoBehaviour
     }
 
     void MoveTowardsFighter()
+{
+    if (isMoving && canMove) // Check if the enemy can move
     {
-       if (isMoving && canMove) // Check if the enemy can move
-        {
-            Vector3 direction = (fighter.position - transform.position).normalized;
-            transform.position += direction * moveSpeed * Time.deltaTime;
-        }
+        // Calculate direction but only use the horizontal component (x-axis)
+        Vector3 direction = (fighter.position - transform.position).normalized;
+        direction.y = 0; // This ensures the enemy only moves horizontally
+
+        transform.position += direction * moveSpeed * Time.deltaTime;
     }
+}
+
 
     void FlipSprite()
     {
