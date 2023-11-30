@@ -8,6 +8,8 @@ public class enemyHealth : MonoBehaviour
     public Animator animator;
     public SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer
     public healthBar enemyhealthBar;
+    public NextLevelScreen NextLevelScreen;
+
 
     void Start()
     {
@@ -38,6 +40,9 @@ public class enemyHealth : MonoBehaviour
 
         // Start the fade-out coroutine
         StartCoroutine(FadeOut(3f)); // 1 second fade-out time
+
+        NextLevelScreen.Setup();
+
     }
 
     IEnumerator FadeOut(float fadeTime)

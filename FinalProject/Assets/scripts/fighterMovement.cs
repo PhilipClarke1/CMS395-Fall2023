@@ -11,7 +11,7 @@ public class FighterMovement : MonoBehaviour
     public Animator animator;
     public float jumpForce = 10f;   
 
-    private int totalDamageDealt = 0;
+    public int totalDamageDealt = 0;
 
     public healthBar healthBar;
 
@@ -72,13 +72,18 @@ public class FighterMovement : MonoBehaviour
         }
     }
 
-    void Die(){
+    void Die()
+{
+    animator.SetBool("IsDead", true);
+    StartCoroutine(ShowGameOverScreenAfterDelay(2.5f));
+}
 
-        animator.SetBool("IsDead", true);
+IEnumerator ShowGameOverScreenAfterDelay(float delay)
+{
+    yield return new WaitForSeconds(delay);
+    GameOverScreen.Setup(totalDamageDealt);
+}
 
-        GameOverScreen.Setup(totalDamageDealt);
-
-    }
 
 //     void OnDrawGizmos() {
 //     Gizmos.color = Color.red;

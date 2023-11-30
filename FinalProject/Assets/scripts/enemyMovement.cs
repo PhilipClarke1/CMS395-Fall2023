@@ -9,6 +9,7 @@ public class enemyMovement : MonoBehaviour
     public float stopDuration = 1.0f;
     public Animator animator;
 
+
     private bool canMove = true;
 
     public Transform attackPoint;
@@ -47,12 +48,20 @@ public class enemyMovement : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D collision)
+{
+    if (collision.gameObject.CompareTag("Fighter"))
     {
-        if (collision.gameObject.CompareTag("Fighter")) // Ensure you have tagged your fighter GameObject with "Fighter" tag
-        {
-            canMove = false; // Stop the enemy movement
-        }
+        canMove = false;
+        StartCoroutine(ResumeMovementAfterDelay(2.0f)); // Resume movement after 2 seconds
     }
+}
+
+    IEnumerator ResumeMovementAfterDelay(float delay)
+{
+    yield return new WaitForSeconds(delay);
+    canMove = true;
+}
+
 
     IEnumerator MoveAndStopRoutine()
     {
