@@ -48,22 +48,29 @@ public class FighterMovement : MonoBehaviour
     }
 
     void Update()
-    {   
+    {
 
-        if(Time.time >= nextAttackTime){
-
-            if(Input.GetKeyDown(KeyCode.K)){
+        if (Time.time >= nextAttackTime)
+        {
+            if (Input.GetKeyDown(KeyCode.K))
+            {
                 HandleAttack();
-                nextAttackTime = Time.time + 1f /attackRate;
             }
-
+            if (Input.GetKeyDown(KeyCode.L))
+            {
+                HandleAttack2();
+            }
+            if (Input.GetKeyDown(KeyCode.L) && Input.GetKeyDown(KeyCode.K))
+            {
+                HandleAttack3();
+            }
         }
         AnimateMovement();  
         HandleMovement();
         HandleJump();
-        HandleAttack();
-        HandleAttack2();
-        HandleAttack3();
+        //HandleAttack();
+        //HandleAttack2();
+        //HandleAttack3();
 
     }
 
@@ -119,7 +126,14 @@ IEnumerator ShowGameOverScreenAfterDelay(float delay)
 
     void HandleAttack(){
 
-        if(Input.GetKeyDown(KeyCode.K)){
+        if (Time.time >= nextAttackTime)
+        {
+            PerformAttack();
+            ApplyDamage(attackOneDamage);
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+
+        if (Input.GetKeyDown(KeyCode.K)){
             PerformAttack();
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
 
@@ -148,7 +162,14 @@ IEnumerator ShowGameOverScreenAfterDelay(float delay)
 
     void HandleAttack2(){
 
-        if(Input.GetKeyDown(KeyCode.L)){
+        if (Time.time >= nextAttackTime)
+        {
+            PerformAttack2();
+            ApplyDamage(attackTwoDamage);
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+
+        if (Input.GetKeyDown(KeyCode.L)){
             PerformAttack2();
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
 
@@ -165,7 +186,14 @@ IEnumerator ShowGameOverScreenAfterDelay(float delay)
     }
     void HandleAttack3(){
 
-        if(Input.GetKeyDown(KeyCode.L) && Input.GetKeyDown(KeyCode.K)){
+        if (Time.time >= nextAttackTime)
+        {
+            PerformAttack3();
+            ApplyDamage(attackThreeDamage);
+            nextAttackTime = Time.time + 1f / attackRate;
+        }
+
+        if (Input.GetKeyDown(KeyCode.L) && Input.GetKeyDown(KeyCode.K)){
             PerformAttack3();
             Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
 
@@ -219,6 +247,17 @@ IEnumerator ShowGameOverScreenAfterDelay(float delay)
 
             animator.SetBool("isJumping", true);
 
+        }
+    }
+
+    void ApplyDamage(int damageAmount)
+    {
+        Collider2D[] hitEnemies = Physics2D.OverlapCircleAll(attackpoint.position, attackRange, enemyLayers);
+        foreach (Collider2D enemy in hitEnemies)
+        {
+            enemy.GetComponent<enemyHealth>().TakeDamage(damageAmount);
+            totalDamageDealt += damageAmount;
+            soundEffectPlayer.swordNoHit();
         }
     }
 
