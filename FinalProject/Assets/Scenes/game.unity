@@ -160,7 +160,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 293.954, y: 121.84}
+  m_AnchoredPosition: {x: 331, y: 147.25}
   m_SizeDelta: {x: 163.3507, y: 25.409}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &75799326
@@ -1185,9 +1185,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -292.1165, y: 124}
-  m_SizeDelta: {x: 142.8676, y: 21.089}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -317, y: 147.25}
+  m_SizeDelta: {x: 142.8676, y: 25.409}
+  m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &689156733
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1539,6 +1539,7 @@ MonoBehaviour:
   src: {fileID: 2146546759}
   sfx1: {fileID: 8300000, guid: 90030e8577d714083bd719a36f50213e, type: 3}
   sfx2: {fileID: 0}
+  sfx3: {fileID: 0}
 --- !u!1 &820938903
 GameObject:
   m_ObjectHideFlags: 0
@@ -2320,6 +2321,7 @@ MonoBehaviour:
   src: {fileID: 2146546759}
   sfx1: {fileID: 8300000, guid: 90030e8577d714083bd719a36f50213e, type: 3}
   sfx2: {fileID: 0}
+  sfx3: {fileID: 0}
 --- !u!1 &1194363209
 GameObject:
   m_ObjectHideFlags: 0
@@ -3109,9 +3111,9 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305.04, y: 194.37}
+  m_AnchoredPosition: {x: -328.64, y: 201}
   m_SizeDelta: {x: 215.9179, y: 74.2615}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_Pivot: {x: 0.49999997, y: 0.5}
 --- !u!114 &1389501730
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3805,7 +3807,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: 361, y: -119}
+  m_AnchoredPosition: {x: 370, y: -211}
   m_SizeDelta: {x: 401.2513, y: 129.685}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!95 &1673850420
@@ -4741,6 +4743,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 2836789637811467681}
   enemyhealthBar: {fileID: 75799326}
   NextLevelScreen: {fileID: 515948687}
+  soundEffectPlayer: {fileID: 0}
 --- !u!95 &2836789637811467677 stripped
 Animator:
   m_CorrespondingSourceObject: {fileID: 7073663017519103308, guid: a7091b1b5fc594f5b8b7adc8d1effc90, type: 3}
@@ -4794,6 +4797,7 @@ MonoBehaviour:
   src: {fileID: 2146546759}
   sfx1: {fileID: 0}
   sfx2: {fileID: 8300000, guid: c6e5c5d5878a34831b7f399d34e79771, type: 3}
+  sfx3: {fileID: 8300000, guid: 37564e321933e459b9cc618bc59527e8, type: 3}
 --- !u!1001 &3194058697261978062
 PrefabInstance:
   m_ObjectHideFlags: 0

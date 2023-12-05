@@ -83,8 +83,28 @@ public class FighterMovement : MonoBehaviour
 {
     animator.SetBool("IsDead", true);
     StartCoroutine(ShowGameOverScreenAfterDelay(2.5f));
-}
 
+        DisableCombatComponents();
+    }
+
+void DisableCombatComponents()
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
+        {
+            collider.enabled = false;
+        }
+        this.enabled = false;
+
+        // Optionally, disable Rigidbody2D if you don't want the character to be affected by physics anymore
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.isKinematic = true;
+        }
+
+    }
 IEnumerator ShowGameOverScreenAfterDelay(float delay)
 {
     yield return new WaitForSeconds(delay);

@@ -36,6 +36,7 @@ public class enemyHealth : MonoBehaviour
         if (currentHealth <= 0)
         {
             Die();
+            
         }
     }
 
@@ -47,14 +48,15 @@ public class enemyHealth : MonoBehaviour
         animator.SetBool("IsDead", true);
 
         // Start the fade-out coroutine
-        StartCoroutine(FadeOut(3f)); // 1 second fade-out time
-        StartCoroutine(ShowNextLevelScreenAfterDelay(2.5f));
+        StartCoroutine(FadeOut(2f)); // 2 second fade-out time
+        //StartCoroutine(ShowNextLevelScreenAfterDelay(2.5f));
+        NextLevelScreen.Setup();
 
 
         //NextLevelScreen.Setup();
+        DisableCombatComponents();
 
     }
-
 
     IEnumerator ShowNextLevelScreenAfterDelay(float delay)
     {
@@ -74,5 +76,20 @@ public class enemyHealth : MonoBehaviour
 
         // Disable or destroy the enemy after fade-out
         gameObject.SetActive(false); // or Destroy(gameObject);
+    }
+
+    void DisableCombatComponents()
+    {
+        Collider2D collider = GetComponent<Collider2D>();
+        if (collider != null)
+        {
+            collider.enabled = false;
+        }
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            rb.velocity = Vector2.zero;
+            rb.isKinematic = true; // Makes the Rigidbody not respond to physics
+        }
     }
 }
