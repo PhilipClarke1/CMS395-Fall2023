@@ -8,7 +8,7 @@
 **Task Distribution among Teammates**:
 - **Thomas Garvin (Lead Designer)**: Responsible for character and level design.
 - **Philip Clarke (Project Manager)**: Manages project timeline, resources, and coordination among team members.
-- **Trevor Dorfman (Lead Developer)**: Handles game development, including coding, AI implementation, and mechanics.
+- **Trevor Dorfman (Lead Developer)**: Handles game development, including coding, and mechanics.
 
 
 
