@@ -12,10 +12,18 @@ public class BackToMainMenu : MonoBehaviour
         backButton.onClick.AddListener(LoadMainMenu);
     }
 
+    private void Update()
+    {
+        // Check if the "Esc" key is pressed.
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            LoadMainMenu();
+        }
+    }
+
     private void LoadMainMenu()
     {
-        // Load the "MainMenu" scene when the button is clicked.
+        // Load the "MainMenu" scene when the button is clicked or Esc is pressed.
         SceneManager.LoadScene("Start Menu");
     }
 }
-
