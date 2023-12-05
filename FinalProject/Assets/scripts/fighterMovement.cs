@@ -9,7 +9,9 @@ public class FighterMovement : MonoBehaviour
     public float moveSpeed = 5.0f;    // speed of fighter
     public Rigidbody2D fighter;
     public Animator animator;
-    public float jumpForce = 10f;   
+    public float jumpForce = 10f;
+
+    public soundeffectplayer soundEffectPlayer;
 
     public int totalDamageDealt = 0;
 
@@ -41,6 +43,8 @@ public class FighterMovement : MonoBehaviour
         fighter = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
+        soundEffectPlayer = GetComponent<soundeffectplayer>();
+
     }
 
     void Update()
@@ -105,8 +109,10 @@ IEnumerator ShowGameOverScreenAfterDelay(float delay)
 
             enemy.GetComponent<enemyHealth>().TakeDamage(attackOneDamage);
             totalDamageDealt += attackOneDamage;
+                soundEffectPlayer.swordNoHit();
 
         }
+
         }
         
 
@@ -133,7 +139,8 @@ IEnumerator ShowGameOverScreenAfterDelay(float delay)
             enemy.GetComponent<enemyHealth>().TakeDamage(attackTwoDamage);
             totalDamageDealt += attackTwoDamage;
         }
-    }
+            soundEffectPlayer.swordNoHit();
+        }
 
     }
     void HandleAttack3(){
@@ -149,7 +156,8 @@ IEnumerator ShowGameOverScreenAfterDelay(float delay)
             enemy.GetComponent<enemyHealth>().TakeDamage(attackThreeDamage);
             totalDamageDealt += attackThreeDamage;
         }
-    }
+            soundEffectPlayer.swordNoHit();
+        }
     }
 
 

@@ -10,11 +10,16 @@ public class enemyHealth : MonoBehaviour
     public healthBar enemyhealthBar;
     public NextLevelScreen NextLevelScreen;
 
+    public soundeffectplayer soundEffectPlayer;
+
+
 
     void Start()
     {
         currentHealth = maxHealth;
         enemyhealthBar.SetMaxHealth(maxHealth);
+        soundEffectPlayer = GetComponent<soundeffectplayer>();
+
     }
 
     public void TakeDamage(int damage)
@@ -24,6 +29,9 @@ public class enemyHealth : MonoBehaviour
 
         // Play damage animation  
         animator.SetTrigger("Hurt");
+        soundEffectPlayer.swordHit();
+
+
 
         if (currentHealth <= 0)
         {

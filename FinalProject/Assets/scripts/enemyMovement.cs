@@ -9,6 +9,9 @@ public class enemyMovement : MonoBehaviour
     public float stopDuration = 1.0f;
     public Animator animator;
 
+    public soundeffectplayer soundEffectPlayer;
+
+
 
     private bool canMove = true;
 
@@ -32,6 +35,8 @@ public class enemyMovement : MonoBehaviour
 
         StartCoroutine(MoveAndStopRoutine());
         StartCoroutine(PunchRoutine());
+        soundEffectPlayer = GetComponent<soundeffectplayer>();
+
     }
 
     void Update()
@@ -79,11 +84,13 @@ public class enemyMovement : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2f); // Wait for 2 seconds
+            yield return new WaitForSeconds(1f); // Wait for 1 seconds
 
             if (Random.value > 0f) // 50% chance to punch
             {
                 punch();
+                soundEffectPlayer.punchSound();
+
             }
         }
     }
