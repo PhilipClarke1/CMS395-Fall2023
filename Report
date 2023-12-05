@@ -1,0 +1,32 @@
+Fortfight - A 2D Fighter Game
+Authors:
+Thomas Garvin (Lead Designer)
+Philip Clarke (Project Manager)
+Trevor Dorfman (Lead Developer)
+
+GitHub Link:
+https://github.com/PhilipClarke1/CMS395-Fall2023 
+
+The creation of "Fortfight," a 2D fighter game set in an imaginative world of fortresses, embodies the collaborative effort of our team. The motivation was to craft a gaming experience that is both entertaining and accessible, allowing players of all skill levels to play.
+
+Our target users are casual gamers, and our goal is to provide a simple and engaging gameplay experience. The game takes place in a colorful and vibrant world, featuring exotic fighting grounds as the backdrop for thrilling battles. The rule of fortfight is to try and get as many points as possible and defeat the npc.
+
+The game's controls: arrow keys or WASD for character movement, keys (e.g., A, S, D) for various attacks, a combination of keys for special moves, spacebar for jumping, and the Esc key for pausing or accessing the menu.
+
+The distribution of tasks among team members is: Thomas Garvin takes charge of character and level design, Philip Clarke oversees project management responsibilities, and Trevor Dorfman leads game development, encompassing coding, and mechanics.
+
+Game Development:
+
+The process of developing "Fortfight" unfolded scene by scene, with each team member contributing to different aspects of the game. In our initial project update, Trevor developed the development of the main menu and scene gateways, while Thomas focused on the creation of the rule set and tutorial page. Philip delved into designing the starting scene and crafting vibrant backgrounds.
+
+As we progressed to our second project update, Thomas expanded the interactive elements by adding tiles. Philip handled the task of introducing the protagonist, implementing movement and animations, while Trevor initiated the implementation of the computer antagonist for level one.
+
+In our final update, Thomas made a health bar. Philip implemented interaction codes for the protagonist and antagonist, affecting the health bar. Trevor added a path to a new level, with Philip incorporating the functionality for advancing to the next level.
+
+https://youtu.be/sWHgdswQzXc 
+Fortfight Gameplay Video (in video attack damage was increased and enemy health was decreased for time)
+
+
+
+Discussion and Future Work:
+It was a hard and long project where we learned a lot. This includes things like teamwork, c#, and unity. It helps us better prepare for our future endevreous. In the future, we plan on expanding "Fortfight" by introducing additional characters, levels, and incorporating multiplayer functionality. We hope you enjoy it!
