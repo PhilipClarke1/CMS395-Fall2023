@@ -12,6 +12,6 @@ public class NextLevelScreen : MonoBehaviour
         gameObject.SetActive(true);
     }
     public void ExitButton(){
-        SceneManager.LoadScene("Level2");
+        SceneManager.LoadScene("Level 2");
     }
 }

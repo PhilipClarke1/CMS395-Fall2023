@@ -3736,7 +3736,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 515948687}
         m_TargetAssemblyTypeName: NextLevelScreen, Assembly-CSharp
-        m_MethodName: 
+        m_MethodName: ExitButton
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4749,7 +4749,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e25af74cb09e849e6882ec3a858c9db4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 400
+  maxHealth: 250
   currentHealth: 0
   animator: {fileID: 2836789637811467677}
   spriteRenderer: {fileID: 2836789637811467681}
