@@ -41,6 +41,9 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: guy
+    uniqueID: 4254502491
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
