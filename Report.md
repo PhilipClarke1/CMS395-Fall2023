@@ -34,7 +34,7 @@ Progressing to the second update, Thomas added interactive elements, while Phili
 In the final update, Thomas introduced a health bar, and Philip implemented interaction codes for the protagonist and antagonist, affecting the health bar. Trevor added a path to a new level, and Philip incorporated the functionality for advancing to the next level.
 
 ## Fortfight Gameplay Video:
-[Watch Fortfight Gameplay](https://youtu.be/sWHgdswQzXc) *(Note: In the video, attack damage was increased, and enemy health was decreased for demonstration purposes.)*
+[Watch Fortfight Gameplay](https://youtu.be/sWHgdswQzXc) *(Note: In the video, sound is disabled, attack damage was increased, and enemy health was decreased for demonstration purposes.)*
 
 ## Discussion and Future Work:
 
